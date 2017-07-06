@@ -21,11 +21,9 @@ PRODUCT_MODEL := Nexus 5
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/media_codecs_ffmpeg.xml.stub:/system/etc/media_codecs_ffmpeg.xml
 
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
-
-PRODUCT_PACKAGES += \
-    Terminal \
-    Launcher3
-
